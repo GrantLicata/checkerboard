@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') ">
     <title>Checkerboard</title>
 </head>
 <body>
     <div class="row">
-        {% for i in range(0,x)}
+        {% for i in range(x)}
+            {% if i%3 == 0: %}
+                <div class="dark"></div>
+            {% else: %}
+                <div class="light"></div>
+            {% endif %}
+        {% endfor %}
     </div>
 </body>
 </html>

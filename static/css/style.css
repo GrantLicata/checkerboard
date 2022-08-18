@@ -1,0 +1,11 @@
+.dark {
+    background: black;
+    height: 150px;
+    width: 150px;
+}
+
+.light {
+    background: white;
+    height: 150px;
+    width: 150px;
+}
