@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Checkerboard</title>
 </head>
 <body>
-    <div class="row">
-        {% for i in range(x)}
-            {% if i%3 == 0: %}
-                <div class="dark"></div>
+    <div id="border">
+        {% for i in range(x) %}
+            {% if i%2 == 0: %}
+                <div class="row">
+                    {% for row in range(y) %}
+                        {% if row%2 == 0: %}
+                            <div class="dark" style="background: {{color1}}"></div>
+                        {% else: %}
+                            <div class="light" style="background: {{color2}}"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             {% else: %}
-                <div class="light"></div>
+                <div class="row">
+                    {% for row in range(y) %}
+                        {% if row%2 == 0: %}
+                            <div class="light" style="background: {{color2}}"></div>
+                        {% else: %}
+                            <div class="dark" style="background: {{color1}}"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             {% endif %}
         {% endfor %}
     </div>

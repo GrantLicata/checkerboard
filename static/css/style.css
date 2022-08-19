@@ -1,11 +1,33 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#border {
+    border: 5px solid black;
+    width: fit-content;
+    height: fit-content;
+    margin: 30px 0px 0px 30px
+}
+
+.row {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
 .dark {
-    background: black;
-    height: 150px;
-    width: 150px;
+    /* background: black; */
+    height: 80px;
+    width: 80px;
+    padding: 0px!important;
+    margin: 0px!important;
 }
 
 .light {
-    background: white;
-    height: 150px;
-    width: 150px;
+    /* background: white; */
+    height: 80px;
+    width: 80px;
+    padding: 0px!important;
+    margin: 0px!important;
 }
