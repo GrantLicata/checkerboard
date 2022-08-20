@@ -1,4 +1,4 @@
-* {
+*, body, div {
     padding: 0px;
     margin: 0px;
 }
@@ -7,11 +7,11 @@
     border: 5px solid black;
     width: fit-content;
     height: fit-content;
-    margin: 30px 0px 0px 30px
+    margin: 0px;
 }
 
 .row {
-    display: inline-block;
+    display: flex;
     margin: 0px;
     padding: 0px;
 }
